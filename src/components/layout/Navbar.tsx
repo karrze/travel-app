@@ -9,8 +9,8 @@ import { Link, useLocation } from "react-router-dom";
 
 const navLinks = [
   { to: "/", label: "Home" },
-  { to: "/offers", label: "Oferty" },
-  { to: "/about", label: "O nas" },
+  { to: "/podroz/nowa", label: "Zaplanuj podróż" },
+  { to: "/podroze", label: "Moje podróże" },
 ];
 
 export function AppNavbar() {
@@ -21,9 +21,9 @@ export function AppNavbar() {
       <NavbarBrand>
         <Link
           to="/"
-          className="self-center whitespace-nowrap text-xl font-semibold text-blue-600"
+          className="self-center whitespace-nowrap font-heading text-2xl text-primary-900"
         >
-          Travel App
+          Packfit
         </Link>
       </NavbarBrand>
       <NavbarToggle />

@@ -1,5 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
 @import "flowbite-react/plugin/tailwindcss";
 @source "../.flowbite-react/class-list.json";
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+/*
+ * Packfit design tokens — jedyne źródło prawdy dla stylów.
+ * Wartości pochodzą z Figmy (Packfit_pierwszeEkrany, page "mobile 1st").
+ * W komponentach używamy WYŁĄCZNIE klas tokenowych (bg-primary-900,
+ * font-heading, rounded-base, shadow-xs itd.) — zero hardkodowanych wartości.
+ */
+@theme {
+  /* ===== Kolory — brand (rose/900 z Figmy: #8b0836) ===== */
+  --color-primary-50: #fdf2f5;
+  --color-primary-100: #fbe8ee;
+  --color-primary-200: #f7cdda;
+  --color-primary-300: #f2a8bf;
+  --color-primary-400: #e9739b;
+  --color-primary-500: #dc477b;
+  --color-primary-600: #c62a63;
+  --color-primary-700: #a81a4f;
+  --color-primary-800: #9f1239; /* linki w tekście pomocniczym */
+  --color-primary-900: #8b0836; /* główny kolor brandu: przyciski, akcenty */
+  --color-primary-950: #55021f;
+
+  /* ===== Kolory — szarości (z Figmy) ===== */
+  --color-gray-50: #f9fafb; /* tło ekranu */
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb; /* obramowania kart i przycisków secondary */
+  --color-gray-300: #d1d5dc; /* obramowania inputów, nieaktywne kropki */
+  --color-gray-400: #99a1af; /* placeholdery */
+  --color-gray-500: #6a7282; /* tekst subtelny (caption, divider) */
+  --color-gray-600: #4a5565; /* tekst drugorzędny */
+  --color-gray-700: #333e4f; /* opisy / body secondary */
+  --color-gray-800: #1e2939;
+  --color-gray-900: #101828; /* nagłówki, tekst główny */
+  --color-gray-950: #030712;
+
+  /* ===== Typografia ===== */
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Instrument Serif", ui-serif, Georgia, serif;
+  --tracking-heading: 0.02em; /* 0.6px przy 30px */
+  --leading-heading: 1.15;
+
+  /* ===== Zaokrąglenia ===== */
+  --radius-base: 0.75rem; /* 12px — przyciski, inputy */
+  --radius-card: 1rem; /* 16px — karty, zdjęcia */
+
+  /* ===== Cienie ===== */
+  --shadow-xs: 0 1px 0.25px rgba(29, 41, 61, 0.02);
+}
+
+@layer base {
+  body {
+    @apply bg-gray-50 font-sans text-gray-900 antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading font-normal tracking-heading;
+    line-height: var(--leading-heading);
+  }
+}

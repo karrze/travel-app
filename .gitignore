@@ -24,3 +24,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Zbyt duze pliki robocze (limit GitHub 100 MB)
+Files/Mini backlog.pdf

@@ -1,21 +1,30 @@
 import { Button } from "flowbite-react";
+import { Link } from "react-router-dom";
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-blue-600 to-cyan-500 px-4 py-20 text-white">
-      <div className="relative z-10 mx-auto max-w-4xl text-center">
-        <h1 className="mb-4 text-4xl font-bold tracking-tight md:text-5xl">
-          Odkryj świat z Travel App
-        </h1>
-        <p className="mb-8 text-lg text-blue-100 md:text-xl">
-          Planuj wymarzone podróże, przeglądaj najlepsze oferty i wyrusz w
-          niezapomnianą przygodę.
+    <section className="bg-white px-4 py-20">
+      <div className="mx-auto max-w-3xl text-center">
+        <p className="mb-3 text-sm font-medium uppercase tracking-wide text-primary-800">
+          Packfit
         </p>
-        <Button size="xl" color="light" className="font-semibold">
-          Zobacz oferty
-        </Button>
+        <h1 className="mb-4 text-4xl text-gray-900 md:text-5xl">
+          Pakuj się stylizacjami, nie pojedynczymi rzeczami
+        </h1>
+        <p className="mb-8 text-lg text-gray-600">
+          Powiedz nam, dokąd jedziesz i co zabierasz pod uwagę — Packfit dobierze
+          outfity na każdy dzień i wygeneruje listę pakowania dopasowaną do
+          Twojego bagażu.
+        </p>
+        <div className="flex justify-center gap-3">
+          <Button size="lg" as={Link} to="/podroz/nowa">
+            Zaplanuj podróż
+          </Button>
+          <Button size="lg" color="light" as={Link} to="/podroze">
+            Moje podróże
+          </Button>
+        </div>
       </div>
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1600&q=80')] bg-cover bg-center opacity-20" />
     </section>
   );
 }

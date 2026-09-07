@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "flowbite": {
+      "type": "stdio",
+      "command": "/Users/karolinarzepnicka/.nvm/versions/node/v24.20.0/bin/node",
+      "args": [
+        "/Users/karolinarzepnicka/.nvm/versions/node/v24.20.0/lib/node_modules/flowbite-mcp/build/index.js"
+      ],
+      "env": {
+        "PATH": "/Users/karolinarzepnicka/.nvm/versions/node/v24.20.0/bin:/usr/bin:/bin:/usr/sbin:/sbin",
+        "FIGMA_ACCESS_TOKEN": "${env:FIGMA_ACCESS_TOKEN}"
+      }
+    }
+  }
+}
